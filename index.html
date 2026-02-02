@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggo Kombat</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { text-align: center; background: #f0f0f0; font-family: sans-serif; }
+        .dog { width: 200px; transition: transform 0.1s; cursor: pointer; }
+        .dog:active { transform: scale(0.9); }
+        #score { font-size: 32px; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Doggo Kombat</h1>
+    <div id="score">0</div>
+    <img src="https://img.freepik.com/free-vector/cute-dog-sitting-cartoon-vector-illustration_1308-164010.jpg" class="dog" id="dogBtn">
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть на весь экран
+
+        let score = 0;
+        const btn = document.getElementById('dogBtn');
+        const scoreDisplay = document.getElementById('score');
+
+        btn.onclick = function() {
+            score++;
+            scoreDisplay.innerText = score;
+            // Здесь в будущем будет запрос к твоему Python серверу для сохранения
+        };
+    </script>
+</body>
+</html>
+

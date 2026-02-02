@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #ffcc00 0%, #ff9900 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    user-select: none;
+}
+
+.header { margin-top: 20px; text-align: center; }
+.score-container { font-size: 40px; font-weight: bold; display: flex; justify-content: center; align-items: center; gap: 10px; }
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+#dog-btn {
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.05s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#dog-btn:active {
+    transform: scale(0.92); /* Эффект нажатия */
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+}
+
